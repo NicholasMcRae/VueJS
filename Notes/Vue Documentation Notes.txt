@@ -1,3 +1,6 @@
+                            Essentials
+							**********
+
 Introduction
 ************
 - core library is focused on the view layer only
@@ -86,3 +89,10 @@ Event Handling
 Form Input Bindings
 *******************
 - You can use the v-model directive to create two way data bindings on form input etc
+
+Component Basics
+****************
+- Components are reusable Vue instances with a name
+- We can use this component as a custom element inside a root Vue instance created with new Vue
+- since components are reusable Vue instances, they accept the same options as new Vue, such as data, computed, watch, methods, ad lifecycle hooks
+- Can pass data to child components with props
