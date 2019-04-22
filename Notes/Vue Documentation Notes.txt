@@ -36,3 +36,53 @@ The Vue Instance
 - Instance Lifecycle Hooks
 	- Vue instances run functions called lifecycle hooks, giving users the opportunity to add their own code at specific stages
 	
+Template Syntax
+***************
+- Vue uses an HTML based template syntax that allows you to declaratively bind the rendered DOM to the underlying Vue instance data
+- you can also directly write render functions instead of templates, with optional JSX support
+- Interpolations
+	- the most basic form of data binding is text interpolation using double curly braces
+	- In order to output real HTML, you will need to use the v-html directive
+- JavaScript expressions
+	- so far we've only been binding to simple property keys n our templates
+	- Vue supports the full power of JS expressions inside all data bindings
+- Directives (as discussed in previous section)
+
+Computed Properties and Watchers
+********************************
+- Computed Properties
+	- Expressions are convenient, but putting too much logic in your templates can make them bloated and hard to maintain
+	- Can make templates no longer simple and declarative
+	- that's why for any complex logic you should use a computed property
+	- computed properties are properties that use a method
+	- computed properties are cached based on their reactive dependencies
+	- in comparison, a method invocation will always run the function whenever a re-render happens
+- Computed vs Watched property
+	- Watch is imperative and repetitive
+- Computed Setter
+	- computed properties are by default getter-only, but you can also provide a setter when you need it
+- Watchers
+	- Useful when you want to perform asynchronous or expensive operations in response to changing data
+	- Using the watch option allows us to perform an asynchronous operation (accessing an API), limit how often we perform that operation, and set intermediary states until we get a final answer
+	
+Class and Style Bindings
+************************
+- a common need for data binding is manipulating an element's class list and its inline styles
+- we can pass an object to v-bind:class to dyamically toggle classes
+
+Conditional Rendering
+*********************
+- the directive v-if is used to conditionally render a block
+- if we want to toggle more than one element, we can use v-if on a template element, which serves as an invisible wrapper
+
+List Rendering
+**************
+- Mapping an Array to Elements with v-for
+
+Event Handling
+**************
+- We can use the v-on directive to listen to DOM events and run some JS when they're triggered
+	
+Form Input Bindings
+*******************
+- You can use the v-model directive to create two way data bindings on form input etc
